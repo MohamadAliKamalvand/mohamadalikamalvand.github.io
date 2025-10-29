@@ -3,25 +3,41 @@ name: Generate Sitemap
 on:
   push:
     branches: [ main ]
+  schedule:
+    - cron: '0 0 * * *'  # هر روز یکبار اجرا شود (اختیاری)
 
 jobs:
   generate-sitemap:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # برای lastmod دقیق
+    permissions:
+      contents: write  # اجازه push به مخزن
 
-      - name: Generate sitemap
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate Sitemap
         uses: cicirello/generate-sitemap@v1
         with:
           base-url: https://mohamadalikamalvand.github.io
-          drop-html-extension: true  # بدون .html در URLها
+          drop-html-extension: true
+          # optional: path-to-sitemap: ./sitemap.xml  # پیش‌فرض همین است
 
-      - name: Commit sitemap
+      - name: Commit & Push Sitemap
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Action"
           git add sitemap.xml
-          git commit -m "Update sitemap [skip ci]" || echo "No changes"
-          git push
+          
+          # فقط اگر تغییری وجود داشت commit کنیم
+          if git diff --staged --quiet; then
+            echo "No changes in sitemap.xml"
+            exit 0
+          fi
+          
+          git commit -m "Update sitemap.xml [skip ci]"
+          git push origin HEAD:main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
