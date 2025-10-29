@@ -4,37 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="محمد علی کمالوند - مشاور انبارداری و زنجیره تامین. بهینه‌سازی، ایمنی و فناوری در مدیریت انبار">
-    <meta name="keywords" content="مشاور انبارداری, زنجیره تامین, بهینه‌سازی انبار, هوش مصنوعی در انبارداری, لجستیک, محمد علی کمالوند">
+    <meta name="keywords" content="مشاور انبارداری, زنجیره تامین, بهینه‌سازی انبار, هوش مصنوعbits, لجستیک, محمد علی کمالوند">
     <meta name="author" content="محمد علی کمالوند">
-    
+    <meta name="robots" content="index, follow">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://md-ali.github.io/Mohamad-Ali-Kamalvand/">
+    <meta property="og:url" content="https://mohamadalikamalvand.github.io/">
     <meta property="og:title" content="محمد علی کمالوند | مشاور انبارداری و زنجیره تامین">
     <meta property="og:description" content="مدیریت هوشمند انبار و بهینه‌سازی زنجیره تامین">
-    <meta property="og:image" content="https://https://md-ali.github.io/Mohamad-Ali-Kamalvand/profile.jpg">
+    <meta property="og:image" content="https://mohamadalikamalvand.github.io/profile.jpg">
+    <meta property="og:image:alt" content="محمد علی کمالوند">
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://https://md-ali.github.io/Mohamad-Ali-Kamalvand/">
+    <meta property="twitter:url" content="https://mohamadalikamalvand.github.io/">
     <meta property="twitter:title" content="محمد علی کمالوند | مشاور انبارداری و زنجیره تامین">
     <meta property="twitter:description" content="مدیریت هوشمند انبار و بهینه‌سازی زنجیره تامین">
-    <meta property="twitter:image" content="https://https://md-ali.github.io/Mohamad-Ali-Kamalvand/profile.jpg">
-    <!-- Schema.org markup -->
+    <meta property="twitter:image" content="https://mohamadalikamalvand.github.io/profile.jpg">
+
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "محمد علی کمالوند",
-      "url": "https://https://md-ali.github.io/Mohamad-Ali-Kamalvand/",
-      "image": "https://md-ali.github.io/Mohamad-Ali-Kamalvand/profile.jpg",
+      "url": "https://mohamadalikamalvand.github.io/",
+      "image": "https://mohamadalikamalvand.github.io/profile.jpg",
       "jobTitle": "مشاور انبارداری و زنجیره تامین",
       "description": "مدیریت هوشمند انبار و بهینه‌سازی زنجیره تامین",
       "email": "mohamadalikamalvand@gmail.com",
-      "telephone": "+989196257377"
+      "telephone": "+989196257377",
+      "sameAs": [
+        "https://linkedin.com/in/mohamadali-kamalvand-95a469347",
+        "https://github.com/mohamadalikamalvand"
+      ]
     }
     </script>
 
     <title>محمد علی کمالوند | مشاور انبارداری و زنجیره تامین</title>
+
+    <!-- Font: Vazirmatn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
 
     <style>
         * {
@@ -62,7 +73,6 @@
             min-height: 100vh;
         }
 
-        @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
         /* Header & Navigation */
         header {
             background: rgba(15, 20, 25, 0.95);
@@ -95,7 +105,7 @@
         .logo img {
             width: 70px;
             height: 70px;
-            border-radius: 70%;
+            border-radius: 50%;
             border: 3px solid var(--secondary-color);
             object-fit: cover;
         }
@@ -417,6 +427,7 @@
             font-size: 2.5rem;
             color: var(--secondary-color);
             margin-bottom: 1rem;
+            display: block;
         }
 
         .contact-item h3 {
@@ -428,6 +439,7 @@
             color: var(--text-secondary);
             text-decoration: none;
             transition: color 0.3s ease;
+            word-break: break-all;
         }
 
         .contact-item a:hover {
@@ -445,49 +457,27 @@
 
         footer p {
             color: var(--text-secondary);
+            font-size: 0.9rem;
         }
 
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
-            .hero h2 {
-                font-size: 1.8rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-
+            .hero h2 { font-size: 1.8rem; }
+            .hero p { font-size: 1rem; }
+            .nav-links { flex-direction: column; gap: 0.5rem; }
             .expertise-grid,
             .showcase-grid,
             .articles-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
+            .contact-grid { grid-template-columns: 1fr; }
         }
 
-        /* Animations */
+        /* Animation */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .hero-content,
-        .expertise-card,
-        .showcase-item,
-        .article-card,
-        .about-content,
-        .contact-item {
+        .hero-content, .expertise-card, .showcase-item, .article-card, .about-content, .contact-item {
             animation: fadeInUp 0.6s ease forwards;
         }
 
@@ -503,7 +493,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="profile.jpg" alt="محمد علی کمالوند">
+                <img src="profile.jpg" alt="محمد علی کمالوند - مشاور انبارداری">
                 <h1>محمد علی کمالوند</h1>
             </div>
             <ul class="nav-links">
@@ -534,27 +524,27 @@
             <h2 class="section-title">حوزه‌های تخصصی</h2>
             <div class="expertise-grid">
                 <div class="expertise-card">
-                    <h3>🏭  بهینه‌سازی چیدمان انبار مواد شیمیایی</h3>
-                    <p>طراحی و پیاده‌سازی سیستم‌های چیدمان هوشمند با استفاده از الگوریتم‌های K-Means+GA  جهت ایمنی و جلوگیری از واکنش بین مواد شیمیایی و افزایش بهره‌وری</p>
+                    <h3>بهینه‌سازی چیدمان انبار مواد شیمیایی</h3>
+                    <p>طراحی و پیاده‌سازی سیستم‌های چیدمان هوشمند با استفاده از الگوریتم‌های K-Means+GA جهت ایمنی و جلوگیری از واکنش بین مواد شیمیایی و افزایش بهره‌وری</p>
                 </div>
                 <div class="expertise-card">
-                    <h3>🤖 هوش مصنوعی در انبارداری</h3>
+                    <h3>هوش مصنوعی در انبارداری</h3>
                     <p>توسعه سیستم‌های یادگیری عمیق برای پیش‌بینی تقاضا، مسیریابی خودکار AGV، و تشخیص الگوهای ناکارآمد در عملیات انبار</p>
                 </div>
                 <div class="expertise-card">
-                    <h3>📊 تحلیل داده و گراف</h3>
+                    <h3>تحلیل داده و گراف</h3>
                     <p>کاربرد تئوری گراف و الگوریتم‌های بهینه‌سازی در مسیریابی، مدیریت شبکه توزیع و تحلیل جریان مواد در زنجیره تامین</p>
                 </div>
                 <div class="expertise-card">
-                    <h3>🔒 ایمنی و ردیابی</h3>
-                    <p>طراحی سیستم‌های ردیابی ، مدیریت پلمپ محموله‌های حساس و ایجاد پروتکل‌های امنیتی برای جلوگیری از اشتباهات انسانی</p>
+                    <h3>ایمنی و ردیابی</h3>
+                    <p>طراحی سیستم‌های ردیابی، مدیریت پلمپ محموله‌های حساس و ایجاد پروتکل‌های امنیتی برای جلوگیری از اشتباهات انسانی</p>
                 </div>
                 <div class="expertise-card">
-                    <h3>🚚 مدیریت زنجیره تامین</h3>
+                    <h3>مدیریت زنجیره تامین</h3>
                     <p>بهینه‌سازی فرآیندهای دریافت، ذخیره‌سازی و ارسال با استفاده از روش‌های Order Batching و Linear Programming</p>
                 </div>
                 <div class="expertise-card">
-                    <h3>💡 مشاوره و آموزش</h3>
+                    <h3>مشاوره و آموزش</h3>
                     <p>ارائه راهکارهای عملی، انتقال دانش فنی و آموزش تیم‌های عملیاتی برای استقرار فناوری‌های نوین در محیط‌های صنعتی</p>
                 </div>
             </div>
@@ -578,7 +568,7 @@
                     </div>
                 </div>
                 <div class="showcase-item">
-                    <img src="warehouse-3d-model.JPG" alt="مدل‌سازی سه‌بعدی">
+                    <img src="warehouse-3d-model.JPG" alt="مدل‌سازی سه‌بعدی انبار">
                     <div class="showcase-overlay">
                         <h3>مدل‌سازی سه‌بعدی</h3>
                         <p>شبیه‌سازی و بهینه‌سازی طراحی فضای انبار</p>
@@ -590,33 +580,25 @@
         <section id="articles">
             <h2 class="section-title">مقالات و تحقیقات</h2>
             <div class="articles-grid">
-                 <div class="article-card">
-                    <h3>بهینه سازی چیدمان انبار مواد شیمیایی با استفاده از هوش مصنوعی و با رویکردی نوین </h3>
-                    <p></p>این مقاله یک روش نو آورانه برای بهینه سازی چیدمان انبارهای شیمیایی با AI را ارائه داد که ایمنی در انبار ها را اولویت میبخشد. </p>
-                    <a href="chidamane.pdf" class="article-link" target="_blank">
-                        مطالعه مقاله ←
-                      </a>
-                 </div>    
+                <div class="article-card">
+                    <h3>بهینه‌سازی چیدمان انبار مواد شیمیایی با استفاده از هوش مصنوعی</h3>
+                    <p>این مقاله یک روش نوآورانه برای بهینه‌سازی چیدمان انبارهای شیمیایی با AI را ارائه می‌دهد که ایمنی را اولویت می‌دهد.</p>
+                    <a href="chidamane.pdf" class="article-link" target="_blank">مطالعه مقاله ←</a>
+                </div>
                 <div class="article-card">
                     <h3>کاربرد گراف در هوش مصنوعی</h3>
                     <p>بررسی انواع گراف و کاربردهای آن در سیستم‌های هوشمند، مسیریابی و تحلیل شبکه‌های پیچیده زنجیره تامین</p>
-                    <a href="graph.pdf" class="article-link" target="_blank">
-                        مطالعه مقاله ←
-                    </a>
+                    <a href="graph.pdf" class="article-link" target="_blank">مطالعه مقاله ←</a>
                 </div>
                 <div class="article-card">
                     <h3>سیستم ردیابی و مدیریت تحویل</h3>
-                    <p>طراحی ربات تلگرام برای ثبت خودکار تحویل و مدیریت ردیابی لحظه‌ای محموله‌ها  </p>
-                    <a href="tracking.pdf" class="article-link" target="_blank">
-                        مطالعه مقاله ←
-                    </a>
+                    <p>طراحی ربات تلگرام برای ثبت خودکار تحویل و مدیریت ردیابی لحظه‌ای محموله‌ها</p>
+                    <a href="tracking.pdf" class="article-link" target="_blank">مطالعه مقاله ←</a>
                 </div>
                 <div class="article-card">
-                    <h3>استراتژی مدیریت زنجیره </h3>
-                    <p>اهمیت استراتژی مدیریت زنجیره تامین و نقش انبار در این استراتژی  </p>
-                    <a href="strategy.pdf" class="article-link" target="_blank">
-                        مطالعه مقاله ←
-                    </a>
+                    <h3>استراتژی مدیریت زنجیره تامین</h3>
+                    <p>اهمیت استراتژی مدیریت زنجیره تامین و نقش انبار در این استراتژی</p>
+                    <a href="strategy.pdf" class="article-link" target="_blank">مطالعه مقاله ←</a>
                 </div>
             </div>
         </section>
@@ -624,15 +606,9 @@
         <section id="about">
             <h2 class="section-title">درباره من</h2>
             <div class="about-content">
-                <p>
-                    من <strong>محمد علی کمالوند</strong> هستم، مهندس و مشاور حوزه انبارداری و زنجیره تامین. تمرکز اصلی من بر پیاده‌سازی فناوری‌های هوش مصنوعی، یادگیری ماشین و تحلیل داده برای حل مسائل واقعی صنعت لجستیک است.
-                </p>
-                <p>
-                    در طول فعالیت حرفه‌ای خود، پروژه‌های متعددی در زمینه بهینه‌سازی فرآیندهای انبار، طراحی سیستم‌های ردیابی هوشمند و توسعه الگوریتم‌های مسیریابی انجام داده‌ام. هدف من کمک به سازمان‌ها برای دستیابی به حداکثر کارایی، کاهش هزینه‌ها و افزایش ایمنی در عملیات روزانه است.
-                </p>
-                <p>
-                    مقالات و محتوای این وب‌سایت حاصل تجربیات علمی و عملی، مطالعات آکادمیک و پروژه‌های اجرایی من است که امیدوارم برای مدیران، مهندسان و علاقه‌مندان حوزه لجستیک مفید واقع شود.
-                </p>
+                <p>من <strong>محمد علی کمالوند</strong> هستم، مهندس و مشاور حوزه انبارداری و زنجیره تامین. تمرکز اصلی من بر پیاده‌سازی فناوری‌های هوش مصنوعی، یادگیری ماشین و تحلیل داده برای حل مسائل واقعی صنعت لجستیک است.</p>
+                <p>در طول فعالیت حرفه‌ای خود، پروژه‌های متعددی در زمینه بهینه‌سازی فرآیندهای انبار، طراحی سیستم‌های ردیابی هوشمند و توسعه الگوریتم‌های مسیریابی انجام داده‌ام. هدف من کمک به سازمان‌ها برای دستیابی به حداکثر کارایی، کاهش هزینه‌ها و افزایش ایمنی در عملیات روزانه است.</p>
+                <p>مقالات و محتوای این وب‌سایت حاصل تجربیات علمی و عملی، مطالعات آکادمیک و پروژه‌های اجرایی من است که امیدوارم برای مدیران، مهندسان و علاقه‌مندان حوزه لجستیک مفید واقع شود.</p>
             </div>
         </section>
 
@@ -652,17 +628,17 @@
                 <div class="contact-item">
                     <i>💬</i>
                     <h3>تلگرام</h3>
-                    <a href="https://t.Malikamalnand" target="_blank">@Malikamalvand</a>
+                    <a href="https://t.me/Malikamalvand" target="_blank">@Malikamalvand</a>
                 </div>
                 <div class="contact-item">
                     <i>💻</i>
                     <h3>گیت‌هاب</h3>
-                    <a href="https://md-ali.github.io/Mohamad-Ali-Kamalvand/" target="_blank">https://md-ali/Mohamad-Ali-Kamalvand/</a>
+                    <a href="https://github.com/mohamadalikamalvand" target="_blank">github.com/mohamadalikamalvand</a>
                 </div>
-                 <div class="contact-item">
-                    <i>💻</i>
-                    <h3></h3>لینکدین</h3>
-                    <a href="https://linkedin.com/in/mohamadali-kamalvand-95a469347" target="_blank">Mohamad-Ali-Kamalvand95a469347</a>
+                <div class="contact-item">
+                    <i>💼</i>
+                    <h3>لینکدین</h3>
+                    <a href="https://linkedin.com/in/mohamadali-kamalvand-95a469347" target="_blank">Mohamad-Ali-Kamalvand</a>
                 </div>
             </div>
         </section>
