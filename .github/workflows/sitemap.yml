@@ -1,0 +1,39 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '*.html'
+      - 'assets/**'
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  generate-sitemap:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate Sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url: https://mohamadalikamalvand.github.io
+          drop-html-extension: true
+
+      - name: Commit & Push
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Action"
+          git add sitemap.xml
+          
+          if ! git diff --staged --quiet; then
+            git commit -m "Update sitemap.xml"
+            git push
+          fi
