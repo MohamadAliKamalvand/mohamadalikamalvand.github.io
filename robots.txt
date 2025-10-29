@@ -1,0 +1,14 @@
+# robots.txt for mohamadalikamalvand.github.io
+User-agent: *
+
+# اجازه به همه صفحات
+Allow: /
+
+# فقط فایل‌های غیرضروری رو بلاک کن
+Disallow: /.github/
+Disallow: /assets/raw/
+Disallow: /*.log
+Disallow: /*.tmp
+
+# ارجاع به نقشه سایت (مهم!)
+Sitemap: https://mohamadalikamalvand.github.io/sitemap.xml
