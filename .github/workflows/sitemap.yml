@@ -21,14 +21,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      # حذف setup-node و npm install
-
       - name: Generate Sitemap
         uses: cicirello/generate-sitemap@v1
         with:
           base-url: https://mohamadalikamalvand.github.io
           drop-html-extension: true
-         include-file-types: html 
+          include-file-types: html   # فقط صفحات HTML در سیتمپ
 
       - name: Commit & Push Changes
         env:
@@ -39,7 +37,7 @@ jobs:
           git add sitemap.xml
           
           if ! git diff --staged --quiet; then
-            git commit -m "Update sitemap.xml [skip ci]"
+            git commit -m "Update sitemap.xml (HTML only) [skip ci]"
             git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:main
           else
             echo "No changes to sitemap.xml"
