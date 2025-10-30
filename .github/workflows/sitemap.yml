@@ -28,6 +28,7 @@ jobs:
         with:
           base-url: https://mohamadalikamalvand.github.io
           drop-html-extension: true
+         include-file-types: html 
 
       - name: Commit & Push Changes
         env:
