@@ -1,0 +1,9 @@
+{
+  "name": "mohamadalikamalvand-github-io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitemap generator for GitHub Pages",
+  "dependencies": {
+    "github-pages": "^4.0.0"
+  }
+}
