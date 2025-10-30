@@ -28,6 +28,8 @@ jobs:
           drop-html-extension: true
 
       - name: Commit & Push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Action"
@@ -35,5 +37,5 @@ jobs:
           
           if ! git diff --staged --quiet; then
             git commit -m "Update sitemap.xml"
-            git push
+            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:main
           fi
