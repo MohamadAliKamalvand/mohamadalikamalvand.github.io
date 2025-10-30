@@ -21,14 +21,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install Dependencies
-        run: npm install
+      # حذف setup-node و npm install
 
       - name: Generate Sitemap
         uses: cicirello/generate-sitemap@v1
