@@ -16,10 +16,19 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install
 
       - name: Generate Sitemap
         uses: cicirello/generate-sitemap@v1
@@ -27,7 +36,7 @@ jobs:
           base-url: https://mohamadalikamalvand.github.io
           drop-html-extension: true
 
-      - name: Commit & Push
+      - name: Commit & Push Changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -36,6 +45,8 @@ jobs:
           git add sitemap.xml
           
           if ! git diff --staged --quiet; then
-            git commit -m "Update sitemap.xml"
+            git commit -m "Update sitemap.xml [skip ci]"
             git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:main
+          else
+            echo "No changes to sitemap.xml"
           fi
