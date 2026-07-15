@@ -7,27 +7,3 @@
     <priority>1.0</priority>
   </url>
 </urlset>
-    
-    <!-- فایل‌های PDF -->
-    <url>
-        <loc>https://ma-kamalvand.github.io/graph.pdf</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://ma-kamalvand.github.io/tracking.pdf</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://ma-kamalvand.github.io/chidamane.pdf</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-</urlset>
